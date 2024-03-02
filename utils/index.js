@@ -5,7 +5,8 @@ import { exec } from 'child_process';
  * @param {*} date
  * @returns {String} yyyy-MM-dd hh:mm:ss
  */
-export function formatDate(date = new Date()) {
+export function formatDate(dateStr) {
+  const date = new Date(dateStr) || new Date();
   const y = date.getFullYear();
   const m = padStart(date.getMonth() + 1, 2, '0');
   const d = padStart(date.getDate(), 2, '0');

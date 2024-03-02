@@ -1,10 +1,10 @@
 {
   "name": "vite-build-git-info",
-  "version": "1.0.0",
-  "description": "",
-  "main": "dist/ems/index.js",
+  "version": "1.0.3",
+  "description": "浏览器中查看git提交信息",
+  "main": "dist/cjs/index.cjs",
   "types": "types/index.d.ts",
-  "type": "module",
+  "module": "dist/ems/index.mjs",
   "scripts": {
     "build": "rollup -c",
     "prepublish": "npm run build"
@@ -14,16 +14,15 @@
     "build",
     "git"
   ],
-  "author": "",
+  "author": "Sugar",
   "files": [
     "dist",
-    "types",
-    "README.md"
+    "types"
   ],
   "exports": {
     ".": {
-      "import": "./dist/ems/index.js",
-      "require": "./dist/cjs/index.js"
+      "import": "./dist/ems/index.mjs",
+      "require": "./dist/cjs/index.cjs"
     }
   },
   "publishConfig": {
